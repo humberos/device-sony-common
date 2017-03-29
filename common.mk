@@ -17,6 +17,13 @@ COMMON_PATH := device/sony/common-msm8996
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
+# Override the default android_filesystem_config.h
+TARGET_ANDROID_FILESYSTEM_CONFIG_H := \
+    $(COMMON_PATH)/include/private/android_filesystem_config.h
+
+PRODUCT_PACKAGES += \
+    fs_config_generate_$(TARGET_DEVICE)
+
 # Common Specific Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
