@@ -14,7 +14,6 @@
 
 # Vendor version
 TARGET_VENDOR_VERSION := 6
-$(TARGET_COPY_OUT_VENDOR)
 
 # Common path
 COMMON_PATH := device/sony/common
